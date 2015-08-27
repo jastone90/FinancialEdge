@@ -1,21 +1,17 @@
+////////////////////////////////////////////////////////////
+// Main.js - The javascript file called by index.jsp
+////////////////////////////////////////////////////////////
+
+
 //developmental small loan
 document.getElementById('loanAmount0').value = 15000;
 document.getElementById('loanInterestRate0').value = 17;
 document.getElementById('minPayment0').value = 600;
 //developmental House loan
-//            document.getElementById('loanAmount0').value= 238500;
-//            document.getElementById('loanInterestRate0').value= 3.125;
-//            document.getElementById('minPayment0').value= 1021.68;
+//document.getElementById('loanAmount0').value= 238500;
+//document.getElementById('loanInterestRate0').value= 3.125;
+//document.getElementById('minPayment0').value= 1021.68;
 
-//$("#forkme_banner").click(function(){
-//    var src = "images/AOD.JPG";
-//    var img = document.createElement("img");
-//    img.src = src;
-//    //img.width = width;
-//    //img.height = height;
-//    //img.alt = alt;
-//    this.appendChild(img);
-//});
 
 
 
@@ -103,11 +99,8 @@ function calculate() {
         labels: allDates[0],
         datasets: []
     };
-    var monthNames = ["Jan", "Feb", "March", "April", "May", "June",
-        "July", "Aug", "Sept", "Oct", "Nov", "Dec"
-    ];
-
-
+    var monthNames = getMonthNames();
+    
     for( var i=0; i<=numberOfLoans; i++){
 
         var loan = parseFloat(document.getElementById('loanAmount'+i).value);
@@ -258,7 +251,7 @@ function whatIf(allMinPayment) {
     $("#payOffChoiceTitle").html('<span class="center">When it comes to additional monthly payments there are two ideologies:</br></span>');
 
     $("#payOffChoice").html('<span class=bold>Avalanche:</span> Target additonal money to the highest interest loans first. Finacially, this is the best option. </br>'+
-                                '<span class=bold>Snowball:</span> Target the lowest balance loans first. Psychologically, this can be more motivating by quickly reducing the number of loans you have.');
+                            '<span class=bold>Snowball:</span> Target the lowest balance loans first. Psychologically, this can be more motivating by quickly reducing the number of loans you have.');
 
     $("#payOffChoiceButton").html('<button  id="recalculateButton" type="button" onclick="recalculate()">Recalculate Loan(s)</button>' +
                                     '<input id="avalancheRadio" checked="true" class="radioChoice" type="radio" value="avalanche"/>Avalanche</input>' +
@@ -289,11 +282,9 @@ function whatIf(allMinPayment) {
 
     $("#avalancheRadio").on('change',function(){
         $("#snowballRadio").attr('checked',false);
-        //alert($("#avalancheRadio").val());
     });
     $("#snowballRadio").on('change',function(){
         $("#avalancheRadio").attr('checked',false);
-        //alert($("#snowballRadio").val());
     });
 
 }
@@ -310,11 +301,11 @@ function recalculate() {
         payOffChoice = 'Snowball';
     }
 
-    $('#whatIfDebtGraphs').html('<hr width="100%" noshade="true"><section id="whatIfDebtGraphs" class="paddingBottom">'+
-                                                            '<div id="graphLeft"><canvas id="whatIfDebtLineGraph" width="760" height="300"></canvas></div>'+
-                                                            '<div id="graphright"><canvas id="whatIfInterestRatio" width="200" height="200"></canvas></div>' +
-                                                            '<div id="whatIfPieLegend"></div>' +
-                                                        '</section>');
+    $('#whatIfDebtGraphs').html('<hr width="100%" noshade="true">' +
+    								'<section id="whatIfDebtGraphs" class="paddingBottom">'+
+                                    	'<div id="graphLeft"><canvas id="whatIfDebtLineGraph" width="760" height="300"></canvas></div>'+
+                                    	'<div id="graphright"><canvas id="whatIfInterestRatio" width="200" height="200"></canvas></div>' +
+                                    '</section>');
     var loanData =orderLoansInterestRate(payOffChoice);
 
     var interestRate = [];
@@ -428,9 +419,7 @@ function recalculate() {
         }
         //alert('Repurposed Min Payments: ' + repurposedMinPayment + '\n Current Additional Pay: ' +currentAdditionalPay +'\n Total:'+ totalMonthlyPayment);
     }
-    var monthNames = ["Jan", "Feb", "March", "April", "May", "June",
-        "July", "Aug", "Sept", "Oct", "Nov", "Dec"
-    ];
+    var monthNames = getMonthNames();
 
     var date = new Date();
     date.setDate(1);
@@ -683,7 +672,11 @@ function orderLoansInterestRate(payOffChoice) {
         allLoanData.sort(function(a, b){return b[0]-a[0]});
     }
     if(payOffChoice == 'Snowball'){
-        allLoanData.sort(function(a, b){return a[1]-b[1]});
     }
     return allLoanData;
+}
+
+
+function getMonthNames() {
+	return ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec" ];
 }
