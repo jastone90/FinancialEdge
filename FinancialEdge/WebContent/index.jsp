@@ -5,8 +5,10 @@
 <meta http-equiv="Content-Type" content="text/html"
 	; charset="ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <meta name="description" content="Jastone90.GitHub.io : ">
-<link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
-<link rel="stylesheet" type="text/css" media="screen" href="css/custom.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen"
+	href="css/custom.css">
 <script src='javascript/Chart.min.js'></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -29,10 +31,10 @@
 
 
 	<ul class="tabs">
-		<li><a href="#tab1">Tab #1</a></li>
-		<li><a href="#tab2">Tab #2</a></li>
-		<li><a href="#tab3">Tab #3</a></li>
-		<li><a href="#tab4">Tab #4</a></li>
+		<li><a href="#tab1">Loan Visualizer</a></li>
+		<li><a href="#tab2">Company Value</a></li>
+		<li><a href="#tab3">Stock FAQ's</a></li>
+		<li><a href="#tab4">TBD</a></li>
 	</ul>
 
 	<div class="clr"></div>
@@ -92,15 +94,18 @@
 			</div>
 		</div>
 
-		<script src='javascript/main.js'></script> </article> <article id="tab2">
-		<p>Tab #2 content goes here!</p>
-		<p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia
-			ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit
-			mauris eget aliquet lacinia! Donec pulvinar massa interdum risus
-			ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus
-			hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida!
-			Aliquam tellus orci, iaculis vel.</p>
-		</article> </section>
+		<script src='javascript/main.js'></script> </article> 
+			<article id="tab2">
+				<p>Company Value</p>
+				<p>Enter Company Name or Ticker here:</p>
+			</article> 
+			<article id="tab3">
+				<p>Common Definitions</p>
+			</article>
+			<article id="tab4">
+				<p>TBD</p>
+			</article>
+		</section>
 	</div>
 
 
