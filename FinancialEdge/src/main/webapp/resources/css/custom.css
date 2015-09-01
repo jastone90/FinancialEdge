@@ -2,39 +2,43 @@
 /*Tab Styles*/
 /********************************************************************************/
 ul.tabs {
-  list-style-type: none;
-  display: block;
-  max-width: 960px;
-  padding: 20px 10px;
-  margin: 0 auto;
+	list-style-type: none;
+	display: block;
+	max-width: 960px;
+	padding: 20px 10px;
+	margin: 0 auto;
 }
+
 ul.tabs li {
-  border: gray solid 1px;
-  border-bottom: none;
-  float: left;
-  margin: 0 .25em 0 0;
-  padding: .25em .5em;
+	border: gray solid 1px;
+	border-bottom: none;
+	float: left;
+	margin: 0 .25em 0 0;
+	padding: .25em .5em;
 }
+
 ul.tabs li a {
-  color: gray;
-  font-weight: bold;
-  text-decoration: none;
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
 }
+
 ul.tabs li.active {
-  background: gray;
+	background: gray;
 }
+
 ul.tabs li.active a {
-  color: white;
+	color: white;
 }
+
 .clr {
-  clear: both;
+	clear: both;
 }
+
 article {
-  border-top: gray solid 1px;
-  padding: 0 1em;
+	border-top: gray solid 1px;
+	padding: 0 1em;
 }
-
-
 
 #graphLeft {
 	display: inline-block;

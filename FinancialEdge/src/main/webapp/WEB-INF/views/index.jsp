@@ -2,16 +2,25 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html"
-	; charset="ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<meta http-equiv="Content-Type" content="text/html"; charset="ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <meta name="description" content="Jastone90.GitHub.io : ">
-<link rel="stylesheet" type="text/css" media="screen"
-	href="css/stylesheet.css">
-<link rel="stylesheet" type="text/css" media="screen"
-	href="css/custom.css">
-<script src='javascript/Chart.min.js'></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<spring:url value="/resources/css/stylesheet.css" var="stylesheetCss" />
+<spring:url value="/resources/css/custom.css" var="customCss" />
+
+<link href="${stylesheetCss}" rel="stylesheet" />
+<link href="${customCss}" rel="stylesheet" />
+
+<!-- <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/custom.css"> -->
+
+<spring:url value="/resources/javascript/main.js" var="coreJs" />
+<spring:url value="/resources/javascript/Chart.min.js" var="chartJs" />
+<script src="${coreJs}"></script>
+<script src="${chartJs}"></script>
+
+<!-- <script src='javascript/Chart.min.js'></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
 
@@ -94,18 +103,14 @@
 			</div>
 		</div>
 
-		<script src='javascript/main.js'></script> </article> 
-			<article id="tab2">
-				<p>Company Value</p>
-				<p>Enter Company Name or Ticker here:</p>
-			</article> 
-			<article id="tab3">
-				<p>Common Definitions</p>
-			</article>
-			<article id="tab4">
-				<p>TBD</p>
-			</article>
-		</section>
+		<script src='javascript/main.js'></script> </article> <article id="tab2">
+		<p>Company Value</p>
+		<p>Enter Company Name or Ticker here:</p>
+		</article> <article id="tab3">
+		<p>Common Definitions</p>
+		</article> <article id="tab4">
+		<p>TBD</p>
+		</article> </section>
 	</div>
 
 
