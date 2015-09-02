@@ -3,7 +3,6 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html"; charset="ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<meta name="description" content="Jastone90.GitHub.io : ">
 
 <spring:url value="/resources/css/stylesheet.css" var="stylesheetCss" />
 <spring:url value="/resources/css/custom.css" var="customCss" />
